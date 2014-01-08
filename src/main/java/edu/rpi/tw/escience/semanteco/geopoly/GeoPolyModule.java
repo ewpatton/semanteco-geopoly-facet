@@ -1,4 +1,4 @@
-package edu.rpi.tw.escience.semanteco.squirrel;
+package edu.rpi.tw.escience.semanteco.geopoly;
 
 import static edu.rpi.tw.escience.semanteco.query.Query.VAR_NS;
 
@@ -36,12 +36,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 
-public class SquirrelModule implements Module {
-	//SQUIRREL
+public class GeoPolyModule implements Module {
+	//GeoPolyModule
 	private ModuleConfiguration config = null;
 	private static final String FAILURE = "{\"success\":false}";
 	//private static final JSONArray failed = new JSONArray("{\"success\":false}"");
-	private static final Logger log = Logger.getLogger(SquirrelModule.class);
+	private static final Logger log = Logger.getLogger(GeoPolyModule.class);
 	
 	//Endpoint
 	private static final String LOGD_ENDPOINT = "http://hercules.tw.rpi.edu:8083/parliament/sparql";
@@ -287,13 +287,13 @@ public class SquirrelModule implements Module {
 	@Override
 	public void visit(final SemantEcoUI ui, final Request request) {
 		// TODO add resources to display
-		Resource res = config.getResource("squirrel.js");
+		Resource res = config.getResource("geopoly.js");
 		ui.addScript(res);
 	}
 
 	@Override
 	public String getName() {
-		return "Squirrel";
+		return "Geographic Polygon";
 	}
 
 	@Override

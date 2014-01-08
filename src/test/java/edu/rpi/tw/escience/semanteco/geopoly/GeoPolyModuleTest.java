@@ -1,4 +1,4 @@
-package edu.rpi.tw.escience.semanteco.squirrel;
+package edu.rpi.tw.escience.semanteco.geopoly;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,16 +11,16 @@ import com.hp.hpl.jena.rdf.model.Model;
 import edu.rpi.tw.escience.semanteco.query.Query;
 import edu.rpi.tw.escience.semanteco.SemantEcoUI;
 import edu.rpi.tw.escience.semanteco.test.TestModuleConfiguration;
-import edu.rpi.tw.escience.semanteco.squirrel.SquirrelModule;
+import edu.rpi.tw.escience.semanteco.geopoly.GeoPolyModule;
 
 import edu.rpi.tw.escience.semanteco.test.TestUI;
 import junit.framework.TestCase;
 
-public class SquirrelModuleTest extends TestCase {
+public class GeoPolyModuleTest extends TestCase {
 	
 	@Test
 	public void testVisitModel() {
-		SquirrelModule module = new SquirrelModule();
+		GeoPolyModule module = new GeoPolyModule();
 		TestModuleConfiguration config = new TestModuleConfiguration();
 		module.setModuleConfiguration(config);
 		module.visit((Model)null, null, null);
@@ -28,7 +28,7 @@ public class SquirrelModuleTest extends TestCase {
 	
 	@Test
 	public void testVisitOntModel() {
-		SquirrelModule module = new SquirrelModule();
+		GeoPolyModule module = new GeoPolyModule();
 		TestModuleConfiguration config = new TestModuleConfiguration();
 		module.setModuleConfiguration(config);
 		module.visit((OntModel)null, null, null);
@@ -36,7 +36,7 @@ public class SquirrelModuleTest extends TestCase {
 	
 	@Test
 	public void testVisitQuery() {
-		SquirrelModule module = new SquirrelModule();
+		GeoPolyModule module = new GeoPolyModule();
 		TestModuleConfiguration config = new TestModuleConfiguration();
 		module.setModuleConfiguration(config);
 		module.visit((Query)null, null);
@@ -44,7 +44,7 @@ public class SquirrelModuleTest extends TestCase {
 	
 	@Test
 	public void testVisitUI() {
-		SquirrelModule module = new SquirrelModule();
+		GeoPolyModule module = new GeoPolyModule();
 		TestModuleConfiguration config = new TestModuleConfiguration();
 		module.setModuleConfiguration(config);
 		//module.visit((SemantEcoUI)null, null);
@@ -53,7 +53,7 @@ public class SquirrelModuleTest extends TestCase {
 	
 	@Test
 	public void testProperties() {
-		SquirrelModule module = new SquirrelModule();
+		GeoPolyModule module = new GeoPolyModule();
 		assertNotNull(module.getName());
 		assertFalse(module.getName().equals(""));
 		assertEquals(1, module.getMajorVersion());

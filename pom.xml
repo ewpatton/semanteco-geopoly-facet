@@ -8,10 +8,10 @@
     <version>4.2-SNAPSHOT</version>
   </parent>
 
-  <artifactId>semanteco-squirrel-facet</artifactId>
+  <artifactId>semanteco-geopoly-facet</artifactId>
 
   <packaging>jar</packaging>
-  <name>semanteco Squirrel facet</name>
+  <name>semanteco geographic polygon facet</name>
   <version>4.1-SNAPSHOT</version>
 
   <repositories>
@@ -41,6 +41,7 @@
   </dependencies>
 
   <build>
+    <defaultGoal>install</defaultGoal>
     <plugins>
       <plugin>
 	<groupId>org.apache.maven.plugins</groupId>

@@ -1,2 +1,2 @@
-<div id="SquirrelFacet" class="facet">
+<div id="GeoPolyFacet" class="facet">
 </div>
